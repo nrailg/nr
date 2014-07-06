@@ -1,23 +1,26 @@
 set nocompatible
-filetype off " required!
+filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'garbas/vim-snipmate'
-Bundle 'gmarik/vundle'
-Bundle 'godlygeek/tabular'
-Bundle 'majutsushi/tagbar'
-Bundle 'rphillips/fuzzyfinder'
-Bundle 'scrooloose/nerdtree'
-Bundle 'shibuyanorailgun/gtags.vim'
-Bundle 'shibuyanorailgun/m_vim-snippets'
-Bundle 'tomtom/tlib_vim'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/AutoComplPop'
-Bundle 'vim-scripts/autoload_cscope.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'garbas/vim-snipmate'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'majutsushi/tagbar'
+Plugin 'rphillips/fuzzyfinder'
+Plugin 'scrooloose/nerdtree'
+Plugin 'shibuyanorailgun/gtags.vim'
+Plugin 'shibuyanorailgun/m_vim-snippets'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-scripts/autoload_cscope.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
@@ -36,7 +39,6 @@ let g:clang_close_preview = 1
 let g:clang_complete_auto = 0
 let g:clang_library_path = "/usr/lib/llvm-3.4/lib/"
 
-filetype plugin indent on
 syntax enable
 syntax on
 set backspace=indent,eol,start
