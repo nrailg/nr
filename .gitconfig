@@ -1,0 +1,9 @@
+[user]
+	email = shibuyanorailgun@gmail.com
+	name = nr
+
+[alias]
+  st = status
+  hist = log --graph --pretty=oneline
+[core]
+	editor = vim
