@@ -3,22 +3,8 @@
 
 # This script remove existing rcs and git repo, then recover from
 # github.
-#
-# TODO: Raise an exception when fail to `cp`.
 
-def recover_rcs
-  rcs = ['.bashrc', '.zshrc', '.gitignore', '.gitconfig',
-         '.gdbinit', '.vimrc']
-  rcs.each do |rc|
-    cmd = "rm ~/#{rc}; cp ./#{rc} ~"
-    err = system cmd
-  end
-end
-
-def recover_git
-  `rm -rf ~/.git`
-  `cp -r .git ~`
-end
+load '.recover.rb'
 
 def recover_vim
   `rm -rf ~/.vim`
