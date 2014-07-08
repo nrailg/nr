@@ -8,7 +8,8 @@
 # TODO: Share functions with recover-online.rb.
 
 def recover_rcs
-  rcs = ['.bashrc', '.zshrc', '.gdbinit', '.vimrc']
+  rcs = ['.bashrc', '.zshrc', '.gitignore', '.gitconfig',
+         '.gdbinit', '.vimrc']
   rcs.each do |rc|
     cmd = "rm ~/#{rc}; cp ./#{rc} ~"
     err = system cmd

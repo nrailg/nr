@@ -4,6 +4,6 @@
 
 [alias]
   st = status
-  hist = log --graph --pretty=oneline
+  hist = log --graph --color=always
 [core]
 	editor = vim
