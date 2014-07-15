@@ -51,13 +51,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias goagent='python /opt/ga_linux-master/proxy.py'
-alias qemu='qemu-system-i386'
 alias trp='trash-put'
-
-export PATH="/home/nr/.local/Matlab-R2012a/bin:$PATH"
-export PATH="/opt/apache-jmeter-2.9/bin:$PATH"
-export PATH="/opt/cross/bin:$PATH"
-export PATH="/opt/global/bin:$PATH"
+alias sugit='sudo -u git -H'
+alias brake='bundle exec rake'
 
 source "/usr/share/autojump/autojump.zsh"

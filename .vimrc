@@ -4,17 +4,14 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Rip-Rip/clang_complete'
-Plugin 'garbas/vim-snipmate'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
 Plugin 'rphillips/fuzzyfinder'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shibuyanorailgun/gtags.vim'
-Plugin 'shibuyanorailgun/m_vim-snippets'
-Plugin 'tomtom/tlib_vim'
+Plugin 'shibuyanorailgun/snipMate'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/autoload_cscope.vim'
@@ -33,11 +30,14 @@ let g:tagbar_sort = 0
 let g:acp_behaviorKeywordLength = 2
 let g:acp_completeOption = '.,w,b,u,t,i'
 let g:acp_ignorecaseOption = 1
+let g:acp_behaviorRubyOmniMethodLength = -1
 
 let g:clang_auto_select = 1
 let g:clang_close_preview = 1
 let g:clang_complete_auto = 0
 let g:clang_library_path = "/usr/lib/llvm-3.4/lib/"
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'clang_complete'
 
 syntax enable
 syntax on
@@ -57,7 +57,6 @@ set shiftwidth=2
 set smartcase
 set smartindent
 set tabstop=2
-set termencoding=utf-8
 set ttyfast
 
 if has('gui_running')
@@ -92,6 +91,8 @@ nnoremap <Leader>ff     :FufFile<CR>
 nnoremap <Leader>fb     :FufBookmark<CR>
 nnoremap <Leader>fa     :FufAddBookmark<CR>
 nnoremap <Leader>bf     :FufBuffer<CR>
+
+abbreviate ip 10.68.33.36
 
 " TODO: TogglePaste
 " function! TogglePaste()

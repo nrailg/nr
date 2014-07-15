@@ -3,7 +3,13 @@
 	name = nr
 
 [alias]
+  o = checkout
+  ci = commit
   st = status
-  hist = log --graph --color=always
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --color=always
+  type = cat-file -t
+  dump = cat-file -p
+
 [core]
-	editor = vim
+  editor = vim
