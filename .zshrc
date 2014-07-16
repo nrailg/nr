@@ -56,3 +56,5 @@ alias sugit='sudo -u git -H'
 alias brake='bundle exec rake'
 
 source "/usr/share/autojump/autojump.zsh"
+
+export PATH="$PATH:/opt/global/bin"
