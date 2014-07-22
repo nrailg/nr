@@ -92,7 +92,8 @@ nnoremap <Leader>fb     :FufBookmark<CR>
 nnoremap <Leader>fa     :FufAddBookmark<CR>
 nnoremap <Leader>bf     :FufBuffer<CR>
 
-abbreviate ip 10.68.33.36
+abbreviate lorem        lorem ipsum
+abbreviate fox          The quick brown fox jumps over the lazy dog
 
 " TODO: TogglePaste
 " function! TogglePaste()
