@@ -55,6 +55,7 @@ alias trp='trash-put'
 alias sugit='sudo -u git -H'
 alias brake='bundle exec rake'
 
-source "/usr/share/autojump/autojump.zsh"
-
 export PATH="$PATH:/opt/global/bin"
+export PATH="$PATH:/opt/nr-scripts/bin"
+
+source "/usr/share/autojump/autojump.zsh"

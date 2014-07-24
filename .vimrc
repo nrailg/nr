@@ -4,15 +4,17 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'vim-scripts/L9'
+Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'SirVer/ultisnips'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'honza/vim-snippets'
 Plugin 'majutsushi/tagbar'
-Plugin 'rphillips/fuzzyfinder'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shibuyanorailgun/gtags.vim'
+Plugin 'shibuyanorailgun/vim-maps'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/autoload_cscope.vim'
@@ -28,8 +30,8 @@ let g:tagbar_autofocus = 1
 let g:tagbar_show_linenumbers = 1
 let g:tagbar_sort = 0
 
-let g:UltiSnipsExpandTrigger="<C-K>"
-let g:UltiSnipsJumpForwardTrigger="<C-K>"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-B>"
 
 let g:acp_behaviorKeywordLength = 2
@@ -75,32 +77,3 @@ else
   colorscheme default
 endif
 highlight NonText cterm=NONE ctermbg=NONE ctermfg=black
-
-nnoremap  ;             :
-inoremap  jk            <ESC>
-inoremap <C-Y>          <C-X><C-Y>
-inoremap <C-E>          <C-X><C-E>
-inoremap <C-F>          <C-X><C-F>
-inoremap <C-L>          <C-X><C-L>
-inoremap <C-O>          <C-X><C-O>
-inoremap <C-U>          <Esc>gUiw`]a
-nnoremap <C-F>          :<C-F>i
-nnoremap <Leader>h      :nohlsearch<CR>
-nnoremap <F2>           :NERDTreeToggle<CR>
-nnoremap <F3>           :TagbarToggle<CR>
-nnoremap <F5>           :w<CR>:make!<CR>
-nnoremap <F6>           :!make run<CR>
-nnoremap <F7>           :make! debug<CR>
-nnoremap <Leader>cc     :cclose<CR>
-nnoremap <Leader>ff     :FufFile<CR>
-nnoremap <Leader>fb     :FufBookmark<CR>
-nnoremap <Leader>fa     :FufAddBookmark<CR>
-nnoremap <Leader>bf     :FufBuffer<CR>
-
-abbreviate lorem        lorem ipsum
-abbreviate fox          The quick brown fox jumps over the lazy dog
-
-" TODO: TogglePaste
-" function! TogglePaste()
-" endfunction
-" nnoremap <Leader>p      :call TogglePaste()<CR>
