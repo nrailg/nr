@@ -12,5 +12,5 @@ highlight def link cMacro_ Constant
 setlocal keywordprg=man\ -s\ 2,3
 setlocal tags+=~/.vim/tags/c.tags,~/.vim/tags/cc.tags
 
-abbreviate szo sizeof(
-abbreviate pth pthread_
+abbr szo sizeof(
+abbr pth pthread_
