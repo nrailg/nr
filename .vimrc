@@ -4,19 +4,19 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'vim-scripts/L9'
-Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'Rip-Rip/clang_complete'
 Plugin 'SirVer/ultisnips'
 Plugin 'gmarik/Vundle.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'honza/vim-snippets'
+Plugin 'klen/python-mode'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shibuyanorailgun/gtags.vim'
 Plugin 'shibuyanorailgun/vim-maps'
+Plugin 'shibuyanorailgun/vim-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/autoload_cscope.vim'
 
 call vundle#end()
@@ -34,7 +34,8 @@ let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-B>"
 
-let g:acp_behaviorKeywordLength = 2
+let g:acp_enableAtStartup = 1
+let g:acp_behaviorKeywordLength = 6
 let g:acp_completeOption = '.,w,b,u,t,i'
 let g:acp_ignorecaseOption = 1
 let g:acp_behaviorRubyOmniMethodLength = -1
@@ -46,10 +47,14 @@ let g:clang_library_path = "/usr/lib/llvm-3.4/lib/"
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
 
+let g:pymode_rope_goto_definition_bind = "<C-]>"
+let g:pymode_folding = 0
+let g:pymode_rope_completion = 0
+
 syntax enable
 syntax on
 set backspace=indent,eol,start
-set completeopt=menuone,longest
+set completeopt=menu,menuone,longest
 set cursorcolumn
 set encoding=utf-8
 set expandtab
@@ -77,3 +82,5 @@ else
   colorscheme default
 endif
 highlight NonText cterm=NONE ctermbg=NONE ctermfg=black
+
+" TODO: Automatically match last bracket
