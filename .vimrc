@@ -50,6 +50,10 @@ let g:clang_snippets_engine = 'ultisnips'
 let g:pymode_rope_goto_definition_bind = "<C-]>"
 let g:pymode_folding = 0
 let g:pymode_rope_completion = 0
+let g:pymode_rope_goto_definition_cmd = 'edit'
+let g:pymode_lint = 0
+let g:pymode_run = 0
+let g:pymode_breakpoint = 0
 
 syntax enable
 syntax on
@@ -82,5 +86,3 @@ else
   colorscheme default
 endif
 highlight NonText cterm=NONE ctermbg=NONE ctermfg=black
-
-" TODO: Automatically match last bracket
