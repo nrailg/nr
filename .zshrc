@@ -6,9 +6,6 @@ prompt adam1
 
 setopt histignorealldups sharehistory
 
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
-
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
@@ -58,3 +55,11 @@ export PATH="$PATH:/opt/global/bin"
 export PATH="$PATH:/opt/nr-scripts/bin"
 
 source "/usr/share/autojump/autojump.zsh"
+
+# Use vim keybindings
+bindkey -v
+bindkey -s jk '\e'
+bindkey "^W" backward-kill-word    # vi-backward-kill-word
+bindkey "^H" backward-delete-char  # vi-backward-delete-char
+bindkey "^U" kill-line             # vi-kill-line
+bindkey "^?" backward-delete-char  # vi-backward-delete-char
