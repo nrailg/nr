@@ -1,12 +1,14 @@
 [user]
-	email = shibuyanorailgun@gmail.com
-	name = nr
+  # email = junyu.wjy@alibaba-inc.com
+  # name = 索加
+  email = shibuyanorailgun@gmail.com
+  name = nr
 
 [alias]
-  o = checkout
+  co = checkout
   ci = commit
   st = status
-  br = branch
+  br = branch --verbose
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --color=always
   type = cat-file -t
   dump = cat-file -p

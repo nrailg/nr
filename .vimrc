@@ -8,7 +8,6 @@ Plugin 'Rip-Rip/clang_complete'
 Plugin 'SirVer/ultisnips'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'klen/python-mode'
-Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shibuyanorailgun/gtags.vim'
 Plugin 'shibuyanorailgun/vim-maps'
@@ -18,6 +17,7 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/autoload_cscope.vim'
+Plugin 'vim-scripts/taglist.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -26,9 +26,9 @@ let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
       \ '\.lo$', '\.la$', '\.so$', '\.cache$']
 
-let g:tagbar_autofocus = 1
-let g:tagbar_show_linenumbers = 1
-let g:tagbar_sort = 0
+let g:Tlist_Use_Right_Window = 1
+let g:Tlist_Show_One_File = 1
+let g:Tlist_GainFocus_On_ToggleOpen = 1
 
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
@@ -48,12 +48,13 @@ let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
 
 let g:pymode_rope_goto_definition_bind = "<C-]>"
-let g:pymode_folding = 0
-let g:pymode_rope_completion = 0
 let g:pymode_rope_goto_definition_cmd = 'edit'
+let g:pymode_rope_completion = 0
+let g:pymode_folding = 0
 let g:pymode_lint = 0
 let g:pymode_run = 0
 let g:pymode_breakpoint = 0
+let g:pymode_doc = 0
 
 syntax enable
 syntax on
