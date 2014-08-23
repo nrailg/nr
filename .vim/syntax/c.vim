@@ -6,6 +6,9 @@ highlight def link _cFunction Function
 syntax match _cDefType display "\<\w\{1,}_t\>"
 highlight def link _cDefType Type
 
+syntax match _cDefType display "\<\w\{1,}_pt\>"
+highlight def link _cDefPointer Type
+
 syntax match _cMacro display "\<[A-Z_][A-Z0-9_]\+\>"
 highlight def link _cMacro Constant
 
