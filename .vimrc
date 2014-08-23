@@ -17,7 +17,7 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/autoload_cscope.vim'
-Plugin 'vim-scripts/taglist.vim'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -26,9 +26,8 @@ let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
       \ '\.lo$', '\.la$', '\.so$', '\.cache$']
 
-let g:Tlist_Use_Right_Window = 1
-let g:Tlist_Show_One_File = 1
-let g:Tlist_GainFocus_On_ToggleOpen = 1
+let g:tagbar_autofocus = 1
+let g:tagbar_sort = 0
 
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
@@ -60,7 +59,6 @@ syntax enable
 syntax on
 set backspace=indent,eol,start
 set completeopt=menu,menuone,longest
-set cursorcolumn
 set encoding=utf-8
 set expandtab
 set exrc
