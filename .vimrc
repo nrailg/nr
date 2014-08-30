@@ -19,6 +19,7 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/autoload_cscope.vim'
+Plugin 'vim-scripts/Conque-GDB'
 
 call vundle#end()
 filetype plugin indent on
@@ -26,6 +27,7 @@ filetype plugin indent on
 let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
       \ '\.lo$', '\.la$', '\.so$', '\.cache$']
+let g:NERDTreeWinPos = 'right'
 
 let g:tagbar_autofocus = 1
 let g:tagbar_sort      = 0
