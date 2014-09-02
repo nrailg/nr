@@ -50,6 +50,7 @@ fi
 
 alias trp='trash-put'
 alias sugit='sudo -u git -H'
+alias iconv='iconv -f gbk -t utf8'
 
 export PATH="$PATH:/opt/global/bin"
 export PATH="$PATH:/opt/nr-scripts/bin"
