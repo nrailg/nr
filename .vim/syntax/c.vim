@@ -20,3 +20,5 @@ setlocal tags+=~/.vim/tags/c.tags,~/.vim/tags/cc.tags
 
 abbr szo sizeof(
 abbr pth pthread_
+
+UltiSnipsAddFiletypes cc.c

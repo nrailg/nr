@@ -19,7 +19,6 @@ Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/autoload_cscope.vim'
-Plugin 'vim-scripts/Conque-GDB'
 
 call vundle#end()
 filetype plugin indent on
@@ -32,9 +31,9 @@ let g:NERDTreeWinPos = 'right'
 let g:tagbar_autofocus = 1
 let g:tagbar_sort      = 0
 
-let g:UltiSnipsExpandTrigger       = "<Tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<Tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-B>"
+let g:UltiSnipsExpandTrigger       = '<Tab>'
+let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 
 let g:acp_enableAtStartup              = 1
 let g:acp_behaviorKeywordLength        = 6
