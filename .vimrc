@@ -18,6 +18,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
+Plugin 'vim-scripts/MatlabFilesEdition'
 Plugin 'vim-scripts/autoload_cscope.vim'
 
 call vundle#end()
@@ -36,7 +37,6 @@ let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 
 let g:acp_enableAtStartup              = 1
-let g:acp_behaviorKeywordLength        = 6
 let g:acp_completeOption               = '.,w,b,u,t,i'
 let g:acp_ignorecaseOption             = 1
 let g:acp_behaviorRubyOmniMethodLength = -1
@@ -84,6 +84,6 @@ elseif &term =~ 'xterm'
   colorscheme molokai
   highlight PmenuSel ctermbg=NONE
 else
-  colorscheme default
+  colorscheme peachpuff
 endif
 highlight NonText cterm=NONE ctermbg=NONE ctermfg=black

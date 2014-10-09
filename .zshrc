@@ -37,8 +37,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias ll='ls -l'
-    alias la='ls -A'
+    alias ll='ls -lh'
+    alias la='ls -Ah'
     alias l='ls -CF'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
@@ -49,11 +49,11 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias trp='trash-put'
-alias sugit='sudo -u git -H'
 alias iconv='iconv -f gbk -t utf8'
+alias dict='dict -d gcide'
+alias logt='tail /var/log/syslog'
 
-export PATH="$PATH:/opt/global/bin"
-export PATH="$PATH:/opt/nr-scripts/bin"
+export PATH="$PATH:/opt/global/bin:/opt/nr-scripts/bin:/opt/Matlab/bin"
 
 source "/usr/share/autojump/autojump.zsh"
 
