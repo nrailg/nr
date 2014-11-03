@@ -40,6 +40,7 @@ let g:acp_enableAtStartup              = 1
 let g:acp_completeOption               = '.,w,b,u,t,i'
 let g:acp_ignorecaseOption             = 1
 let g:acp_behaviorRubyOmniMethodLength = -1
+let g:acp_behaviorKeywordLength        = 4
 
 let g:clang_auto_select     = 1
 let g:clang_close_preview   = 1

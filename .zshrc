@@ -48,22 +48,32 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias trp='trash-put'
-alias iconv='iconv -f gbk -t utf8'
 alias dict='dict -d gcide'
+alias iconv='iconv -f gbk -t utf8'
+alias less='less -r'
 alias logt='tail /var/log/syslog'
-
-export PATH="$PATH:/opt/global/bin:/opt/nr-scripts/bin:/opt/Matlab/bin"
-
-source "/usr/share/autojump/autojump.zsh"
+alias tree='tree -C'
+alias trp='trash-put'
+alias eclipse='/opt/adt-bundle/eclipse/eclipse &'
 
 # Use vim keybindings
 bindkey -v
 bindkey -s jk '\e'
-bindkey "^W" backward-kill-word    # vi-backward-kill-word
-bindkey "^H" backward-delete-char  # vi-backward-delete-char
-bindkey "^U" kill-line             # vi-kill-line
+bindkey "^w" backward-kill-word    # vi-backward-kill-word
+bindkey "^h" backward-delete-char  # vi-backward-delete-char
+bindkey "^u" kill-line             # vi-kill-line
 bindkey "^?" backward-delete-char  # vi-backward-delete-char
-bindkey '^R' history-incremental-search-backward
-bindkey '^P' up-history
-bindkey '^N' down-history
+bindkey '^r' history-incremental-search-backward
+bindkey '^p' up-history
+bindkey '^n' down-history
+
+source "/usr/share/autojump/autojump.zsh"
+
+export PATH="$PATH:/opt/global/bin:/opt/nr-script/bin:/opt/Matlab/bin"
+
+export ANDROID_HOME="/opt/adt-bundle/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+function erred {
+  "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
+}
