@@ -20,6 +20,7 @@ highlight def link _cOperator Keyword
 
 setlocal keywordprg=man\ -s\ 2,3,7
 setlocal tags+=~/.vim/tags/c.tags,~/.vim/tags/cc.tags
+set path+=/lib/modules/3.13.0-24-generic/build/include
 
 abbr szo sizeof(
 abbr pth pthread_

@@ -15,11 +15,12 @@ Plugin 'shibuyanorailgun/gtags.vim'
 Plugin 'shibuyanorailgun/vim-maps'
 Plugin 'shibuyanorailgun/vim-snippets'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/MatlabFilesEdition'
 Plugin 'vim-scripts/autoload_cscope.vim'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'Shougo/vimproc'
 
 call vundle#end()
 filetype plugin indent on
@@ -36,13 +37,33 @@ let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 
-let g:acp_enableAtStartup              = 1
+let g:acp_enableAtStartup              = 0
 let g:acp_completeOption               = '.,w,b,u,t,i'
 let g:acp_ignorecaseOption             = 1
 let g:acp_behaviorRubyOmniMethodLength = -1
 let g:acp_behaviorKeywordLength        = 4
 
-let g:clang_auto_select     = 1
+let g:neocomplcache_auto_completion_start_length = 4
+let g:neocomplcache_enable_at_startup            = 1
+let g:neocomplcache_enable_ignore_case           = 1
+let g:neocomplcache_max_list                     = 50
+
+if !exists('g:neocomplcache_sources_list')
+  let g:neocomplcache_sources_list = {}
+endif
+let g:neocomplcache_sources_list._ =
+      \ ['buffer_complete', 'include_complete']
+
+if !exists('g:neocomplcache_force_omni_patterns')
+  let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_overwrite_completefunc = 1
+let g:neocomplcache_force_omni_patterns.c =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.cpp =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+let g:clang_auto_select     = 0
 let g:clang_close_preview   = 1
 let g:clang_complete_auto   = 0
 let g:clang_library_path    = "/usr/lib/llvm-3.4/lib/"
