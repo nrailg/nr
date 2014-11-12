@@ -49,16 +49,18 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias dict='dict -d gcide'
+alias eclipse='/opt/adt-bundle/eclipse/eclipse &'
 alias iconv='iconv -f gbk -t utf8'
 alias less='less -r'
 alias logt='tail /var/log/syslog'
+alias pe='ps -e'
 alias tree='tree -C'
 alias trp='trash-put'
-alias eclipse='/opt/adt-bundle/eclipse/eclipse &'
 
 # Use vim keybindings
 bindkey -v
 bindkey -s jk '\e'
+bindkey -s '^k' '_'
 bindkey "^w" backward-kill-word    # vi-backward-kill-word
 bindkey "^h" backward-delete-char  # vi-backward-delete-char
 bindkey "^u" kill-line             # vi-kill-line
