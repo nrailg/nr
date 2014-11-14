@@ -18,6 +18,9 @@ highlight def link _cMacro Constant
 syntax match _cOperator display "[-|!%&*+=<>/;,.]"
 highlight def link _cOperator Keyword
 
+syntax match _gcc_builtin display "__\w\+\s*"
+highlight def link _gcc_builtin Keyword
+
 setlocal keywordprg=man\ -s\ 2,3,7
 setlocal tags+=~/.vim/tags/c.tags,~/.vim/tags/cc.tags
 set path+=/lib/modules/3.13.0-24-generic/build/include
