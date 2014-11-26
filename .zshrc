@@ -48,15 +48,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias dict='dict -d gcide'
-alias eclipse='/opt/adt-bundle/eclipse/eclipse &'
-alias iconv='iconv -f gbk -t utf8'
-alias less='less -r'
-alias logt='tail /var/log/syslog'
-alias pe='ps -e'
-alias tree='tree -C'
-alias trp='trash-put'
-
 # Use vim keybindings
 bindkey -v
 bindkey -s jk '\e'
@@ -79,3 +70,12 @@ export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
 }
+
+alias dict='dict -d gcide'
+alias eclipse='/opt/adt-bundle/eclipse/eclipse &'
+alias iconv='iconv -f gbk -t utf8'
+alias less='less -r'
+alias logt='tail /var/log/syslog'
+alias pe='ps -e'
+alias tree='tree -C'
+alias trp='trash-put'

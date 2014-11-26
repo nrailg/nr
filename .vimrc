@@ -12,9 +12,12 @@ Plugin 'klen/python-mode'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shibuyanorailgun/gtags.vim'
+Plugin 'shibuyanorailgun/vim-kgrep'
 Plugin 'shibuyanorailgun/vim-maps'
 Plugin 'shibuyanorailgun/vim-snippets'
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/MatlabFilesEdition'
@@ -36,11 +39,11 @@ let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 
-let g:acp_enableAtStartup              = 0
-let g:acp_completeOption               = '.,w,b,u,t,i'
+let g:acp_enableAtStartup              = 1
+let g:acp_completeOption               = '.,b,i,t,w,u'
 let g:acp_ignorecaseOption             = 1
 let g:acp_behaviorRubyOmniMethodLength = -1
-let g:acp_behaviorKeywordLength        = 2
+let g:acp_behaviorKeywordLength        = 4
 
 let g:clang_auto_select     = 0
 let g:clang_close_preview   = 1

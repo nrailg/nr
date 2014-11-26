@@ -19,7 +19,7 @@ syntax match _gcc_builtin display "__\w\+\s*"
 highlight def link _gcc_builtin Keyword
 
 setlocal keywordprg=man\ -s\ 2,3,7
-" setlocal tags+=~/.vim/tags/c.tags,~/.vim/tags/cc.tags
+"set tags+=~/.vim/tags/c.tags,~/.vim/tags/cc.tags
 set path+=include
 
 abbr szo sizeof(
