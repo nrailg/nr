@@ -17,7 +17,7 @@ Plugin 'shibuyanorailgun/vim-maps'
 Plugin 'shibuyanorailgun/vim-snippets'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/AutoComplPop'
+"Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/MatlabFilesEdition'
@@ -29,11 +29,12 @@ filetype plugin indent on
 let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
       \ '\.lo$', '\.la$', '\.so$', '\.cache$']
-let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinPos    = 'right'
+let g:NERDTreeWinSize   = 45
 
 let g:tagbar_autofocus = 1
 let g:tagbar_sort      = 0
-let g:tagbar_foldlevel = 0
+let g:tagbar_width     = 60
 
 let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
@@ -43,7 +44,7 @@ let g:acp_enableAtStartup              = 1
 let g:acp_completeOption               = '.,b,i,t,w,u'
 let g:acp_ignorecaseOption             = 1
 let g:acp_behaviorRubyOmniMethodLength = -1
-let g:acp_behaviorKeywordLength        = 4
+let g:acp_behaviorKeywordLength        = 8
 
 let g:clang_auto_select     = 0
 let g:clang_close_preview   = 1
@@ -66,7 +67,7 @@ syntax on
 set backspace=indent,eol,start
 set completeopt=menu,menuone,longest
 set encoding=utf-8
-set expandtab
+"set expandtab
 set exrc
 set hidden
 set hlsearch
@@ -74,9 +75,9 @@ set incsearch
 set nowrap
 set number
 set relativenumber
-set shiftwidth=2
+set shiftwidth=8
 set smartindent
-set tabstop=2
+set tabstop=8
 set ttyfast
 
 if has('gui_running')

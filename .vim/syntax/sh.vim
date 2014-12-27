@@ -1,1 +1,1 @@
-nnoremap <buffer> <F5>  :w<CR>:!bash -v %<CR>
+nnoremap <buffer> <F5>  :w<CR>:!bash %<CR>
