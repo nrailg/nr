@@ -1,15 +1,13 @@
 [user]
-  email = shibuyanorailgun@gmail.com
-  name = nr
+	email = shibuyanorailgun@gmail.com
+	name = nr
 
 [alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch --verbose
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --color=always
-  type = cat-file -t
-  dump = cat-file -p
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hi = log --graph --color=always
 
 [core]
-  editor = vim
+	editor = vim

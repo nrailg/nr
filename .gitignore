@@ -1,4 +1,8 @@
 .*
+./.vim/tags/c.tags
+./.vim/tags/cc.tags
+./.vim/tags/python27.tags
+./.vim/tags/python27-local.tags
 
 Books
 Desktop

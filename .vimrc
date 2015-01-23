@@ -11,17 +11,14 @@ Plugin 'godlygeek/tabular'
 Plugin 'klen/python-mode'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
-Plugin 'shibuyanorailgun/gtags.vim'
-Plugin 'shibuyanorailgun/vim-kgrep'
 Plugin 'shibuyanorailgun/vim-maps'
 Plugin 'shibuyanorailgun/vim-snippets'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
-"Plugin 'vim-scripts/AutoComplPop'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
-Plugin 'vim-scripts/MatlabFilesEdition'
 Plugin 'vim-scripts/autoload_cscope.vim'
+Plugin 'vim-scripts/gtags.vim'
 
 call vundle#end()
 filetype plugin indent on

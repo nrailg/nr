@@ -50,7 +50,6 @@ fi
 
 # Use vim keybindings
 bindkey -v
-bindkey -s jk '\e'
 bindkey -s '^k' '_'
 bindkey "^w" backward-kill-word    # vi-backward-kill-word
 bindkey "^h" backward-delete-char  # vi-backward-delete-char
