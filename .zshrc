@@ -61,10 +61,9 @@ bindkey '^n' down-history
 
 source "/usr/share/autojump/autojump.zsh"
 
-export PATH="$PATH:/opt/global/bin:/opt/nr-script/bin:/opt/Matlab/bin"
-
-export ANDROID_HOME="/opt/adt-bundle/sdk"
-export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:/opt/Matlab/bin"
+export PATH="$PATH:/opt/global/bin"
+export PATH="$PATH:/opt/nr-script/bin"
 
 function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
@@ -72,6 +71,8 @@ function erred {
 
 alias dict='dict -d gcide'
 alias eclipse='/opt/adt-bundle/eclipse/eclipse &'
+alias ev='evince'
+alias gdb='gdb -q'
 alias iconv='iconv -f gbk -t utf8'
 alias less='less -r'
 alias logt='tail /var/log/syslog'
@@ -79,4 +80,3 @@ alias pe='ps -e'
 alias tree='tree -C'
 alias trp='trash-put'
 alias uname='uname -r'
-alias gdb='gdb -q'
