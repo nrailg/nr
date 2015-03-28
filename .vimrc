@@ -64,7 +64,6 @@ syntax on
 set backspace=indent,eol,start
 set completeopt=menu,menuone,longest
 set encoding=utf-8
-"set expandtab
 set exrc
 set hidden
 set hlsearch
@@ -76,6 +75,7 @@ set shiftwidth=8
 set smartindent
 set tabstop=8
 set ttyfast
+set cinoptions=(1s,g0,:0,N-s,t0
 
 if has('gui_running')
   set background=dark
@@ -84,7 +84,8 @@ elseif &term =~ 'xterm'
   set t_Co=256
   colorscheme molokai
   highlight PmenuSel ctermbg=NONE
+  "colorscheme default
 else
   colorscheme peachpuff
 endif
-highlight NonText cterm=NONE ctermbg=NONE ctermfg=black
+"highlight NonText cterm=NONE ctermbg=NONE ctermfg=black
