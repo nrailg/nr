@@ -28,7 +28,7 @@ let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
       \ '\.lo$', '\.la$', '\.so$', '\.cache$']
 let g:NERDTreeWinPos    = 'right'
-let g:NERDTreeWinSize   = 45
+let g:NERDTreeWinSize   = 60
 
 let g:tagbar_autofocus = 1
 let g:tagbar_sort      = 0
@@ -63,7 +63,7 @@ let g:pymode_doc                       = 0
 syntax enable
 syntax on
 set backspace=indent,eol,start
-set completeopt=menu,menuone,longest
+set completeopt=menu,menuone
 set encoding=utf-8
 set exrc
 set hidden
