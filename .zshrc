@@ -62,13 +62,14 @@ bindkey '^n' down-history
 source "/usr/share/autojump/autojump.zsh"
 
 export PATH="$PATH:/opt/Matlab/bin"
+export PATH="$PATH:/opt/cross/bin"
 export PATH="$PATH:/opt/global/bin"
 export PATH="$PATH:/opt/nr-script/bin"
 
 TEXDIR='/opt/texlive'
-export PATH="$PATH:$TEXDIR/2014/bin/i386-linux"
-export INFOPATH="$INFOPATH:$TEXDIR/2014/texmf-dist/doc/info"
-export MANPATH="$MANPATH:$TEXDIR/2014/texmf-dist/doc/man"
+export PATH="$PATH:$TEXDIR/bin/i386-linux"
+export INFOPATH="$INFOPATH:$TEXDIR/texmf-dist/doc/info"
+export MANPATH="$MANPATH:$TEXDIR/texmf-dist/doc/man"
 
 function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
