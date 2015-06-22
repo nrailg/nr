@@ -63,7 +63,7 @@ let g:pymode_doc                       = 0
 syntax enable
 syntax on
 set backspace=indent,eol,start
-set completeopt=menu,menuone
+set completeopt=menu,menuone,longest
 set encoding=utf-8
 set exrc
 set hidden
