@@ -86,3 +86,7 @@ alias pe='ps -e'
 alias tree='tree -C'
 alias trp='trash-put'
 alias uname='uname -r'
+
+if [ -e ~/.zsh_localrc ]; then
+	. ~/.zsh_localrc
+fi
