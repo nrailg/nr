@@ -38,12 +38,6 @@ let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 
-let g:acp_enableAtStartup              = 1
-let g:acp_completeOption               = '.,b,i,t,w,u'
-let g:acp_ignorecaseOption             = 1
-let g:acp_behaviorRubyOmniMethodLength = -1
-let g:acp_behaviorKeywordLength        = 8
-
 let g:clang_auto_select     = 0
 let g:clang_close_preview   = 1
 let g:clang_complete_auto   = 0
@@ -59,6 +53,8 @@ let g:pymode_lint                      = 0
 let g:pymode_run                       = 0
 let g:pymode_breakpoint                = 0
 let g:pymode_doc                       = 0
+
+let g:gtag_enter_win_cclose            = 1
 
 syntax enable
 syntax on
