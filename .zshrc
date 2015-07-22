@@ -61,16 +61,6 @@ bindkey '^n' down-history
 
 source "/usr/share/autojump/autojump.zsh"
 
-export PATH="$PATH:/opt/Matlab/bin"
-export PATH="$PATH:/opt/cross/bin"
-export PATH="$PATH:/opt/global/bin"
-export PATH="$PATH:/opt/nr-script/bin"
-
-TEXDIR='/opt/texlive'
-export PATH="$PATH:$TEXDIR/bin/i386-linux"
-export INFOPATH="$INFOPATH:$TEXDIR/texmf-dist/doc/info"
-export MANPATH="$MANPATH:$TEXDIR/texmf-dist/doc/man"
-
 function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
 }
@@ -89,4 +79,54 @@ alias uname='uname -r'
 
 if [ -e ~/.zsh_localrc ]; then
 	. ~/.zsh_localrc
+fi
+
+if [ -e '/opt/cross' ]; then
+	PATH="$PATH:/opt/cross/bin";
+	export PATH;
+fi
+
+if [ -e '/opt/global' ]; then
+	PATH="$PATH:/opt/global/bin";
+	export PATH;
+fi
+
+if [ -e '/opt/nr-script' ]; then
+	PATH="$PATH:/opt/nr-script/bin";
+	export PATH;
+fi
+
+if [ -e '/opt/Matlab' ]; then
+	PATH="$PATH:/opt/Matlab/bin";
+	export PATH;
+fi
+
+TEXDIR='/opt/texlive';
+if [ -e "$TEXDIR" ]; then
+	PATH="$PATH:$TEXDIR/bin/i386-linux";
+	export PATH;
+
+	INFOPATH="$INFOPATH:$TEXDIR/texmf-dist/doc/info";
+	MANPATH="$MANPATH:$TEXDIR/texmf-dist/doc/man";
+	export INFOPATH MANPATH;
+fi
+
+CUDA_PATH='/usr/local/cuda-7.0';
+if [ -e "$CUDA_PATH" ]; then
+	PATH="$PATH:$CUDA_PATH/bin";
+	export PATH;
+
+	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDA_PATH/lib64";
+	export LD_LIBRARY_PATH;
+fi
+
+if [ "$CUDNN_PATH" ] && [ -e "$CUDNN_PATH" ]; then
+	CPATH="$CPATH:$CUDNN_PATH";
+	export CPATH;
+
+	LIBRARY_PATH="$LIBRARY_PATH:$CUDNN_PATH";
+	export LIBRARY_PATH;
+
+	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDNN_PATH";
+	export LD_LIBRARY_PATH;
 fi
