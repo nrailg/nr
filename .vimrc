@@ -19,7 +19,6 @@ Plugin 'vim-scripts/MatlabFilesEdition'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/autoload_cscope.vim'
-Plugin 'vim-scripts/gtags.vim'
 
 call vundle#end()
 filetype plugin indent on
