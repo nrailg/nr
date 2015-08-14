@@ -4,26 +4,32 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shibuyanorailgun/vim-maps'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/MatlabFilesEdition'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'vim-scripts/FuzzyFinder'
 "Plugin 'vim-scripts/L9'
 "Plugin 'vim-scripts/autoload_cscope.vim'
 "Plugin 'shibuyanorailgun/vim-snippets'
-"Plugin 'klen/python-mode'
-"Plugin 'Rip-Rip/clang_complete'
 "Plugin 'SirVer/ultisnips'
 
 call vundle#end()
 filetype plugin indent on
+
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_auto_trigger = 1
+let g:ycm_key_list_select_completion = ['<C-N>',  '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-P>',  '<Up>']
+let g:ycm_key_invoke_completion = '<C-O>'
+let g:ycm_enable_diagnostic_highlighting = 0 
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_show_diagnostics_ui = 0
 
 let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
@@ -39,21 +45,7 @@ let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 
-let g:clang_auto_select     = 0
-let g:clang_close_preview   = 1
-let g:clang_complete_auto   = 0
-let g:clang_library_path    = "/usr/lib/llvm-3.6/lib/"
-let g:clang_snippets        = 0
-let g:clang_snippets_engine = 'ultisnips'
-
-let g:pymode_rope_goto_definition_bind = "<C-]>"
-let g:pymode_rope_goto_definition_cmd  = 'edit'
-let g:pymode_rope_completion           = 0
-let g:pymode_folding                   = 0
-let g:pymode_lint                      = 0
-let g:pymode_run                       = 0
-let g:pymode_breakpoint                = 0
-let g:pymode_doc                       = 0
+let g:ctrlp_working_path_mode = 'c'
 
 let g:gtag_enter_win_cclose            = 1
 
