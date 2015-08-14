@@ -4,21 +4,23 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'Rip-Rip/clang_complete'
-Plugin 'SirVer/ultisnips'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
-Plugin 'klen/python-mode'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shibuyanorailgun/vim-maps'
-Plugin 'shibuyanorailgun/vim-snippets'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/MatlabFilesEdition'
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'vim-scripts/L9'
-Plugin 'vim-scripts/autoload_cscope.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'vim-scripts/FuzzyFinder'
+"Plugin 'vim-scripts/L9'
+"Plugin 'vim-scripts/autoload_cscope.vim'
+"Plugin 'shibuyanorailgun/vim-snippets'
+"Plugin 'klen/python-mode'
+"Plugin 'Rip-Rip/clang_complete'
+"Plugin 'SirVer/ultisnips'
 
 call vundle#end()
 filetype plugin indent on
@@ -40,7 +42,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 let g:clang_auto_select     = 0
 let g:clang_close_preview   = 1
 let g:clang_complete_auto   = 0
-let g:clang_library_path    = "/usr/lib/llvm-3.4/lib/"
+let g:clang_library_path    = "/usr/lib/llvm-3.6/lib/"
 let g:clang_snippets        = 0
 let g:clang_snippets_engine = 'ultisnips'
 

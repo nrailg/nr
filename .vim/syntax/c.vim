@@ -24,5 +24,3 @@ set path+=include
 
 abbr szo sizeof(
 abbr pth pthread_
-
-UltiSnipsAddFiletypes cc.c
