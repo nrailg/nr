@@ -4,20 +4,19 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
-Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
+Plugin 'shibuyanorailgun/nr-snippets'
 Plugin 'shibuyanorailgun/vim-maps'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/MatlabFilesEdition'
-"Plugin 'vim-scripts/L9'
-"Plugin 'vim-scripts/autoload_cscope.vim'
-"Plugin 'shibuyanorailgun/vim-snippets'
-"Plugin 'SirVer/ultisnips'
 
 call vundle#end()
 filetype plugin indent on
@@ -44,10 +43,6 @@ let g:tagbar_width     = 60
 let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
-
-let g:ctrlp_working_path_mode = 'c'
-
-let g:gtag_enter_win_cclose            = 1
 
 syntax enable
 syntax on
