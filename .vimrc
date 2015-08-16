@@ -44,6 +44,8 @@ let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 
+let g:gtag_enter_win_cclose = 1
+
 syntax enable
 syntax on
 set backspace=indent,eol,start
