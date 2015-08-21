@@ -22,7 +22,7 @@ call vundle#end()
 filetype plugin indent on
 
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_auto_trigger = 1
+let g:ycm_auto_trigger = 0
 let g:ycm_key_list_select_completion = ['<C-N>',  '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-P>',  '<Up>']
 let g:ycm_key_invoke_completion = '<C-O>'
