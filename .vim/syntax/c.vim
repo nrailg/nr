@@ -16,7 +16,7 @@ syntax match _cOperator display "[-|!%&*+=<>/;,.]"
 highlight def link _cOperator Keyword
 
 syntax match _gcc_builtin display "__\w\+\s*"
-highlight def link _gcc_builtin Keyword
+highlight def link _gcc_builtin StorageClass
 
 setlocal keywordprg=man\ -s\ 2,3,7
 "set tags+=~/.vim/tags/c.tags,~/.vim/tags/cc.tags
