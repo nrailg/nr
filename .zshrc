@@ -103,7 +103,7 @@ fi
 
 TEXDIR='/opt/texlive';
 if [ -e "$TEXDIR" ]; then
-	PATH="$PATH:$TEXDIR/bin/i386-linux";
+	PATH="$PATH:$TEXDIR/bin/x86_64-linux";
 	export PATH;
 
 	INFOPATH="$INFOPATH:$TEXDIR/texmf-dist/doc/info";
