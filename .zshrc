@@ -81,11 +81,6 @@ if [ -e ~/.zsh_localrc ]; then
 	. ~/.zsh_localrc
 fi
 
-if [ -e '/opt/cross' ]; then
-	PATH="$PATH:/opt/cross/bin";
-	export PATH;
-fi
-
 if [ -e '/opt/global' ]; then
 	PATH="$PATH:/opt/global/bin";
 	export PATH;
@@ -129,4 +124,14 @@ if [ "$CUDNN_PATH" ] && [ -e "$CUDNN_PATH" ]; then
 
 	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDNN_PATH";
 	export LD_LIBRARY_PATH;
+fi
+
+if [ -e "/opt/jdk1.7" ]; then
+	PATH="$PATH:/opt/jdk1.7/bin";
+	export PATH;
+fi
+
+if [ -e "/opt/netbeans-8" ]; then
+	PATH="$PATH:/opt/netbeans-8/bin";
+	export PATH;
 fi
