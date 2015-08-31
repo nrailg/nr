@@ -129,9 +129,17 @@ fi
 if [ -e "/opt/jdk1.7" ]; then
 	PATH="$PATH:/opt/jdk1.7/bin";
 	export PATH;
+
+	JAVA_HOME='/opt/jdk1.7';
+	export JAVA_HOME;
 fi
 
 if [ -e "/opt/netbeans-8" ]; then
 	PATH="$PATH:/opt/netbeans-8/bin";
+	export PATH;
+fi
+
+if [ -e "/opt/hadoop" ]; then
+	PATH="$PATH:/opt/hadoop/bin";
 	export PATH;
 fi
