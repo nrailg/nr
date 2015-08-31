@@ -154,4 +154,7 @@ fi
 if [ -e "$HADOOP_PATH" ]; then
 	PATH="$PATH:$HADOOP_PATH/bin";
 	export PATH;
+
+	HADOOP_CLASSPATH="$JAVA_HOME/lib/tools.jar";
+	export HADOOP_CLASSPATH;
 fi
