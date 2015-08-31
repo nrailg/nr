@@ -127,7 +127,7 @@ if [ "$CUDNN_PATH" ] && [ -e "$CUDNN_PATH" ]; then
 fi
 
 if [ ! "$JDK7_PATH" ]; then
-	JDK7_PATH='/opt/jdk1.7';
+	JDK7_PATH='/usr/lib/jvm/java-7-openjdk-amd64';
 fi
 
 if [ -e "$JDK7_PATH" ]; then
