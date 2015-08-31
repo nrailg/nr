@@ -126,20 +126,32 @@ if [ "$CUDNN_PATH" ] && [ -e "$CUDNN_PATH" ]; then
 	export LD_LIBRARY_PATH;
 fi
 
-if [ -e "/opt/jdk1.7" ]; then
-	PATH="$PATH:/opt/jdk1.7/bin";
+if [ ! "$JDK7_PATH" ]; then
+	JDK7_PATH='/opt/jdk1.7';
+fi
+
+if [ -e "$JDK7_PATH" ]; then
+	PATH="$PATH:$JDK7_PATH/bin";
 	export PATH;
 
-	JAVA_HOME='/opt/jdk1.7';
+	JAVA_HOME="$JDK7_PATH";
 	export JAVA_HOME;
 fi
 
-if [ -e "/opt/netbeans-8" ]; then
-	PATH="$PATH:/opt/netbeans-8/bin";
+if [ ! "$NB8_PATH" ]; then
+	NB8_PATH='/opt/netbeans-8';
+fi
+
+if [ -e "$NB8_PATH" ]; then
+	PATH="$PATH:$NB8_PATH/bin";
 	export PATH;
 fi
 
-if [ -e "/opt/hadoop" ]; then
-	PATH="$PATH:/opt/hadoop/bin";
+if [ ! "$HADOOP_PATH" ]; then
+	HADOOP_PATH='/opt/hadoop';
+fi
+
+if [ -e "$HADOOP_PATH" ]; then
+	PATH="$PATH:$HADOOP_PATH/bin";
 	export PATH;
 fi
