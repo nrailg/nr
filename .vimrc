@@ -4,8 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'Rip-Rip/clang_complete'
 Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
@@ -21,14 +21,12 @@ Plugin 'vim-scripts/MatlabFilesEdition'
 call vundle#end()
 filetype plugin indent on
 
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_auto_trigger = 0
-let g:ycm_key_list_select_completion = ['<C-N>',  '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-P>',  '<Up>']
-let g:ycm_key_invoke_completion = '<C-O>'
-let g:ycm_enable_diagnostic_highlighting = 0 
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_show_diagnostics_ui = 0
+let g:clang_auto_select     = 0
+let g:clang_close_preview   = 1
+let g:clang_complete_auto   = 0
+let g:clang_library_path    = "/usr/lib/llvm-3.6/lib/"
+let g:clang_snippets        = 0
+let g:clang_snippets_engine = 'ultisnips'
 
 let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
