@@ -77,17 +77,22 @@ alias tree='tree -C'
 alias trp='trash-put'
 alias uname='uname -r'
 
+ECLIPSE_PATH='/opt/eclipse';
+if [ -e "$ECLIPSE_PATH" ]; then
+	alias eclipse="$ECLIPSE_PATH/eclipse";
+fi
+
 if [ -e ~/.zsh_localrc ]; then
 	. ~/.zsh_localrc
 fi
 
-if [ -e '/opt/global' ]; then
-	PATH="$PATH:/opt/global/bin";
+if [ -e '/opt/nr-script' ]; then
+	PATH="$PATH:/opt/nr-script/bin";
 	export PATH;
 fi
 
-if [ -e '/opt/nr-script' ]; then
-	PATH="$PATH:/opt/nr-script/bin";
+if [ -e '/opt/global' ]; then
+	PATH="$PATH:/opt/global/bin";
 	export PATH;
 fi
 
@@ -136,15 +141,6 @@ if [ -e "$JDK7_PATH" ]; then
 
 	JAVA_HOME="$JDK7_PATH";
 	export JAVA_HOME;
-fi
-
-if [ ! "$NB8_PATH" ]; then
-	NB8_PATH='/opt/netbeans-8';
-fi
-
-if [ -e "$NB8_PATH" ]; then
-	PATH="$PATH:$NB8_PATH/bin";
-	export PATH;
 fi
 
 if [ ! "$HADOOP_PATH" ]; then
