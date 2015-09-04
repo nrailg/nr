@@ -30,8 +30,7 @@ let g:clang_snippets_engine = 'ultisnips'
 
 let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
-      \ '\.lo$', '\.la$', '\.so$', '\.cache$']
-let g:NERDTreeWinPos    = 'right'
+      \ '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$']
 let g:NERDTreeWinSize   = 60
 
 let g:tagbar_autofocus = 1
