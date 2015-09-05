@@ -154,6 +154,9 @@ if [ -e "$HADOOP_PATH" ]; then
 	HADOOP_CLASSPATH="$JAVA_HOME/lib/tools.jar";
 	export HADOOP_CLASSPATH;
 
-	CLASSPATH="$CLASSPATH:`hadoop classpath`"
+	CLASSPATH="$CLASSPATH:`hadoop classpath`";
 	export CLASSPATH;
+
+	#ANT_CLASSPATH="$ANT_CLASSPATH:$CLASSPATH:$HADOOP_CLASSPATH";
+	#export ANT_CLASSPATH;
 fi

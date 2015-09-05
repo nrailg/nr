@@ -32,6 +32,7 @@ let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
       \ '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$']
 let g:NERDTreeWinSize   = 60
+let g:NERDTreeWinPos    = 'right'
 
 let g:tagbar_autofocus = 1
 let g:tagbar_sort      = 0
