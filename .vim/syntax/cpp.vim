@@ -11,7 +11,3 @@ highlight def link _ccStringClass _ccClass
 
 syntax match _ccVectorClass display "\<vector\>"
 highlight def link _ccVectorClass _ccClass
-
-set tabstop=2
-set shiftwidth=2
-set expandtab
