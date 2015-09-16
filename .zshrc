@@ -76,7 +76,6 @@ alias pe='ps -e'
 alias tree='tree -C'
 alias trp='trash-put'
 alias uname='uname -r'
-alias tmux='TERM=xterm-256color tmux'
 
 ECLIPSE_PATH='/opt/eclipse';
 if [ -e "$ECLIPSE_PATH" ]; then
