@@ -208,4 +208,8 @@ if &t_Co > 255
    hi CursorColumn                ctermbg=234
    hi LineNr          ctermfg=250 ctermbg=NONE
    hi NonText         ctermfg=250 ctermbg=NONE
+
+   " NR: highlight colorcolumn
+   hi ColorColumn     ctermbg=24
+   hi FoldColumn      ctermbg=NONE
 end
