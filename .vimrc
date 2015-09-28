@@ -29,7 +29,7 @@ let g:clang_snippets        = 0
 let g:clang_snippets_engine = 'ultisnips'
 
 let g:NERDTreeDirArrows = 0
-let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$',
+let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.d$', '\.pyc$', '\~$', '\.in$',
       \ '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$']
 let g:NERDTreeWinSize   = 60
 let g:NERDTreeWinPos    = 'right'
