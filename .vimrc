@@ -30,7 +30,7 @@ let g:clang_snippets_engine = 'ultisnips'
 
 let g:NERDTreeDirArrows = 0
 let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.d$', '\.pyc$', '\~$', '\.in$',
-      \ '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$']
+			\ '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$']
 let g:NERDTreeWinSize   = 60
 let g:NERDTreeWinPos    = 'right'
 
@@ -68,11 +68,12 @@ set cursorline
 set cursorcolumn
 
 if has('gui_running')
-  set background=dark
-  colorscheme solarized
+	set background=dark
+	colorscheme solarized
+	set guifont=MonospaceTypewriter\ Medium\ 13
 elseif &term =~ 'xterm'
-  set t_Co=256
-  colorscheme norokai
+	set t_Co=256
+	colorscheme norokai
 else
-  colorscheme peachpuff
+	colorscheme peachpuff
 endif
