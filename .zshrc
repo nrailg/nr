@@ -161,3 +161,12 @@ if [ -e "$HADOOP_PATH" ]; then
 	#ANT_CLASSPATH="$ANT_CLASSPATH:$CLASSPATH:$HADOOP_CLASSPATH";
 	#export ANT_CLASSPATH;
 fi
+
+if [ ! "$ANACONDA_PATH" ]; then
+	ANACONDA_PATH='/opt/anaconda';
+fi
+
+if [ -e "$ANACONDA_PATH" ]; then
+	PATH="$ANACONDA_PATH/bin:$PATH";
+	export PATH;
+fi
