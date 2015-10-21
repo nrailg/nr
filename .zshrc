@@ -112,7 +112,7 @@ if [ -e "$TEXDIR" ]; then
 	export INFOPATH MANPATH;
 fi
 
-CUDA_PATH='/usr/local/cuda-7.0';
+CUDA_PATH='/usr/local/cuda';
 if [ -e "$CUDA_PATH" ]; then
 	PATH="$PATH:$CUDA_PATH/bin";
 	export PATH;
