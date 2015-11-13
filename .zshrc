@@ -142,6 +142,9 @@ if [ -e "$JDK7_PATH" ]; then
 
 	JAVA_HOME="$JDK7_PATH";
 	export JAVA_HOME;
+
+	CLASSPATH=".:${JAVA_HOME}/lib:${JAVA_HOME}/lib/tools.jar";
+	export CLASSPATHl
 fi
 
 if [ ! "$HADOOP_PATH" ]; then
