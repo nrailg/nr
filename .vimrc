@@ -56,9 +56,7 @@ set incsearch
 set nowrap
 set number
 set relativenumber
-set shiftwidth=8
 set smartindent
-set tabstop=8
 set ttyfast
 set cinoptions=(1s,g0,:0,N-s,t0
 set foldcolumn=10
