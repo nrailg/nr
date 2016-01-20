@@ -75,3 +75,6 @@ elseif &term =~ 'xterm'
 else
 	colorscheme peachpuff
 endif
+
+autocmd BufNewFile,BufRead *.cu  set ft=cpp
+autocmd BufNewFile,BufRead *.cuh set ft=cpp
