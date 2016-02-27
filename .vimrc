@@ -59,7 +59,7 @@ set relativenumber
 set smartindent
 set ttyfast
 set cinoptions=(1s,g0,:0,N-s,t0
-set foldcolumn=0
+set foldcolumn=10
 set textwidth=80
 set colorcolumn=+1,+21
 set cursorline
@@ -71,8 +71,8 @@ if has('gui_running')
 	set guifont=MonospaceTypewriter\ Medium\ 13
 elseif &term =~ 'xterm'
 	set t_Co=256
-	"colorscheme norokai
-	colorscheme molokai
+	colorscheme norokai
+	"colorscheme molokai
 else
 	colorscheme peachpuff
 endif
