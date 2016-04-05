@@ -12,17 +12,10 @@ highlight def link _cUnsigned Type
 syntax match _cMacro display "\<[A-Z_][A-Z0-9_]\+\>"
 highlight def link _cMacro Constant
 
-syntax match _cOperator display "[-|!%&*+=<>/;,.]"
-highlight def link _cOperator Keyword
-
 syntax match _gcc_builtin display "__\w\+\s*"
 highlight def link _gcc_builtin StorageClass
 
-syntax match _nr_keyw display "elif"
-highlight def link _nr_keyw Keyword
-
 setlocal keywordprg=man\ -s\ 2,3,7
-"set tags+=~/.vim/tags/c.tags,~/.vim/tags/cc.tags
 set path+=include
 
 abbr szo sizeof(
