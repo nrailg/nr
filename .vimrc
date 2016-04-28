@@ -60,8 +60,8 @@ set smartindent
 set ttyfast
 set cinoptions=(1s,g0,:0,N-s,t0
 set foldcolumn=10
-set textwidth=80
-set colorcolumn=+1,+21
+set textwidth=90
+set colorcolumn=+1,+11
 set cursorline
 set cursorcolumn
 
