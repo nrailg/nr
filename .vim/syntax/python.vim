@@ -8,6 +8,6 @@ nnoremap <buffer> <F5>      :w<CR>:!python2.7 %<CR>
 nnoremap <buffer> <C-G>     :!grep -n <C-R>=expand("<cword>")<CR>
       \ `find -name '*.py'`
 
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
