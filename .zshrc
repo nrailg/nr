@@ -101,7 +101,6 @@ function erred {
 }
 
 alias dict='dict -d gcide'
-alias eclipse='/opt/adt-bundle/eclipse/eclipse &'
 alias ev='evince'
 alias gdb='gdb -q'
 alias iconv='iconv -f gbk -t utf8'
