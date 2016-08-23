@@ -181,23 +181,23 @@ if [ -e "$JDK7_PATH" ]; then
 	export CLASSPATHl
 fi
 
-if [ ! "$HADOOP_PATH" ]; then
-	HADOOP_PATH='/opt/hadoop';
-fi
-
-if [ -e "$HADOOP_PATH" ]; then
-	PATH="$PATH:$HADOOP_PATH/bin";
-	export PATH;
-
-	HADOOP_CLASSPATH="$JAVA_HOME/lib/tools.jar";
-	export HADOOP_CLASSPATH;
-
-	CLASSPATH="$CLASSPATH:`hadoop classpath`";
-	export CLASSPATH;
-
-	#ANT_CLASSPATH="$ANT_CLASSPATH:$CLASSPATH:$HADOOP_CLASSPATH";
-	#export ANT_CLASSPATH;
-fi
+#if [ ! "$HADOOP_PATH" ]; then
+#	HADOOP_PATH='/opt/hadoop';
+#fi
+#
+#if [ -e "$HADOOP_PATH" ]; then
+#	PATH="$PATH:$HADOOP_PATH/bin";
+#	export PATH;
+#
+#	HADOOP_CLASSPATH="$JAVA_HOME/lib/tools.jar";
+#	export HADOOP_CLASSPATH;
+#
+#	CLASSPATH="$CLASSPATH:`hadoop classpath`";
+#	export CLASSPATH;
+#
+#	#ANT_CLASSPATH="$ANT_CLASSPATH:$CLASSPATH:$HADOOP_CLASSPATH";
+#	#export ANT_CLASSPATH;
+#fi
 
 if [ ! "$ANACONDA_PATH" ]; then
 	ANACONDA_PATH='/opt/anaconda';
