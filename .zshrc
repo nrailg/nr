@@ -101,7 +101,6 @@ function erred {
 }
 
 alias dict='dict -d gcide'
-alias eclipse='/opt/adt-bundle/eclipse/eclipse &'
 alias ev='evince'
 alias gdb='gdb -q'
 alias iconv='iconv -f gbk -t utf8'
@@ -115,7 +114,7 @@ alias tmux='tmux -2'
 
 ECLIPSE_PATH='/opt/eclipse';
 if [ -e "$ECLIPSE_PATH" ]; then
-	alias eclipse="$ECLIPSE_PATH/eclipse";
+	alias eclipse="$ECLIPSE_PATH/eclipse >/dev/null 2>/dev/null &";
 fi
 
 if [ -e ~/.zsh_localrc ]; then
@@ -182,23 +181,23 @@ if [ -e "$JDK7_PATH" ]; then
 	export CLASSPATHl
 fi
 
-if [ ! "$HADOOP_PATH" ]; then
-	HADOOP_PATH='/opt/hadoop';
-fi
-
-if [ -e "$HADOOP_PATH" ]; then
-	PATH="$PATH:$HADOOP_PATH/bin";
-	export PATH;
-
-	HADOOP_CLASSPATH="$JAVA_HOME/lib/tools.jar";
-	export HADOOP_CLASSPATH;
-
-	CLASSPATH="$CLASSPATH:`hadoop classpath`";
-	export CLASSPATH;
-
-	#ANT_CLASSPATH="$ANT_CLASSPATH:$CLASSPATH:$HADOOP_CLASSPATH";
-	#export ANT_CLASSPATH;
-fi
+#if [ ! "$HADOOP_PATH" ]; then
+#	HADOOP_PATH='/opt/hadoop';
+#fi
+#
+#if [ -e "$HADOOP_PATH" ]; then
+#	PATH="$PATH:$HADOOP_PATH/bin";
+#	export PATH;
+#
+#	HADOOP_CLASSPATH="$JAVA_HOME/lib/tools.jar";
+#	export HADOOP_CLASSPATH;
+#
+#	CLASSPATH="$CLASSPATH:`hadoop classpath`";
+#	export CLASSPATH;
+#
+#	#ANT_CLASSPATH="$ANT_CLASSPATH:$CLASSPATH:$HADOOP_CLASSPATH";
+#	#export ANT_CLASSPATH;
+#fi
 
 if [ ! "$ANACONDA_PATH" ]; then
 	ANACONDA_PATH='/opt/anaconda';
