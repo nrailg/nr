@@ -114,7 +114,7 @@ alias tmux='tmux -2'
 
 ECLIPSE_PATH='/opt/eclipse';
 if [ -e "$ECLIPSE_PATH" ]; then
-	alias eclipse="$ECLIPSE_PATH/eclipse";
+	alias eclipse="$ECLIPSE_PATH/eclipse >/dev/null 2>/dev/null &";
 fi
 
 if [ -e ~/.zsh_localrc ]; then
