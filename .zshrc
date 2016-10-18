@@ -131,8 +131,8 @@ if [ -e '/opt/global' ]; then
 	export PATH;
 fi
 
-if [ -e '/opt/Matlab' ]; then
-	PATH="$PATH:/opt/Matlab/bin";
+if [ "$MATLAB_PATH" ] && [ -e "$MATLAB_PATH" ]; then
+	PATH="$PATH:$MATLAB_PATH";
 	export PATH;
 fi
 
