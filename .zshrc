@@ -136,7 +136,7 @@ if [ "$MATLAB_PATH" ] && [ -e "$MATLAB_PATH" ]; then
 	export PATH;
 fi
 
-TEXDIR='/opt/texlive';
+TEXDIR='/opt/texlive/2014';
 if [ -e "$TEXDIR" ]; then
 	PATH="$PATH:$TEXDIR/bin/x86_64-linux";
 	export PATH;
