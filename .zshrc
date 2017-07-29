@@ -94,7 +94,7 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^p' up-history
 bindkey '^n' down-history
 
-source "/usr/share/autojump/autojump.zsh"
+#source "/usr/share/autojump/autojump.zsh"
 
 function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
@@ -112,13 +112,13 @@ alias trp='trash-put'
 alias uname='uname -r'
 alias tmux='tmux -2'
 
+if [ -e ~/.zsh_localrc ]; then
+	. ~/.zsh_localrc
+fi
+
 ECLIPSE_PATH='/opt/eclipse';
 if [ -e "$ECLIPSE_PATH" ]; then
 	alias eclipse="$ECLIPSE_PATH/eclipse >/dev/null 2>/dev/null &";
-fi
-
-if [ -e ~/.zsh_localrc ]; then
-	. ~/.zsh_localrc
 fi
 
 if [ -e '/opt/nr-script' ]; then
@@ -146,7 +146,6 @@ if [ -e "$TEXDIR" ]; then
 	export INFOPATH MANPATH;
 fi
 
-CUDA_PATH='/usr/local/cuda';
 if [ -e "$CUDA_PATH" ]; then
 	PATH="$PATH:$CUDA_PATH/bin";
 	export PATH;
@@ -180,24 +179,6 @@ if [ -e "$JDK7_PATH" ]; then
 	CLASSPATH=".:${JAVA_HOME}/lib:${JAVA_HOME}/lib/tools.jar";
 	export CLASSPATHl
 fi
-
-#if [ ! "$HADOOP_PATH" ]; then
-#	HADOOP_PATH='/opt/hadoop';
-#fi
-#
-#if [ -e "$HADOOP_PATH" ]; then
-#	PATH="$PATH:$HADOOP_PATH/bin";
-#	export PATH;
-#
-#	HADOOP_CLASSPATH="$JAVA_HOME/lib/tools.jar";
-#	export HADOOP_CLASSPATH;
-#
-#	CLASSPATH="$CLASSPATH:`hadoop classpath`";
-#	export CLASSPATH;
-#
-#	#ANT_CLASSPATH="$ANT_CLASSPATH:$CLASSPATH:$HADOOP_CLASSPATH";
-#	#export ANT_CLASSPATH;
-#fi
 
 if [ ! "$ANACONDA_PATH" ]; then
 	ANACONDA_PATH='/opt/anaconda';
