@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-"Plugin 'Rip-Rip/clang_complete'
+Plugin 'Rip-Rip/clang_complete'
 Plugin 'SirVer/ultisnips'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
@@ -24,7 +24,7 @@ filetype plugin indent on
 let g:clang_auto_select     = 0
 let g:clang_close_preview   = 1
 let g:clang_complete_auto   = 0
-let g:clang_library_path    = "/usr/lib/llvm-3.4/lib/"
+let g:clang_library_path    = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib"
 let g:clang_snippets        = 0
 let g:clang_snippets_engine = 'ultisnips'
 
@@ -37,6 +37,8 @@ let g:NERDTreeWinPos    = 'right'
 let g:tagbar_autofocus = 1
 let g:tagbar_sort      = 0
 let g:tagbar_width     = 60
+let g:tagbar_foldlevel = 1
+let g:tagbar_hide_nonpublic = 1
 
 let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
@@ -77,5 +79,6 @@ else
 	colorscheme peachpuff
 endif
 
+autocmd BufNewFile,BufRead *.h   set ft=cpp
 autocmd BufNewFile,BufRead *.cu  set ft=cpp
 autocmd BufNewFile,BufRead *.cuh set ft=cpp
