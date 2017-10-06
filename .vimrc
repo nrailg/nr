@@ -12,11 +12,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nrailgun/nr-snippets'
 Plugin 'nrailgun/vim-maps'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
-Plugin 'vim-scripts/MatlabFilesEdition'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,8 +61,6 @@ set cinoptions=(1s,g0,:0,N-s,t0
 set foldcolumn=10
 set textwidth=90
 set colorcolumn=+1,+11
-set cursorline
-set cursorcolumn
 
 if has('gui_running')
 	set background=dark
