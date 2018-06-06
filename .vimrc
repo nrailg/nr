@@ -4,7 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'Rip-Rip/clang_complete'
+"Plugin 'Rip-Rip/clang_complete'
 Plugin 'SirVer/ultisnips'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
@@ -58,7 +58,7 @@ set relativenumber
 set smartindent
 set ttyfast
 set cinoptions=(1s,g0,:0,N-s,t0
-set foldcolumn=10
+"set foldcolumn=10
 set textwidth=90
 set colorcolumn=+1,+11
 
