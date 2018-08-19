@@ -49,6 +49,8 @@ set relativenumber
 set smartindent
 set textwidth=90
 set ttyfast
+set foldmethod=syntax
+set foldlevelstart=99
 
 if has('gui_running')
 	set background=dark
