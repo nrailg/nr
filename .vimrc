@@ -40,6 +40,9 @@ set colorcolumn=+1,+11
 set completeopt=menu,menuone,longest
 set encoding=utf-8
 set exrc
+set fileformat=unix
+set foldlevelstart=99
+set foldmethod=syntax
 set hidden
 set hlsearch
 set incsearch
@@ -49,8 +52,6 @@ set relativenumber
 set smartindent
 set textwidth=90
 set ttyfast
-set foldmethod=syntax
-set foldlevelstart=99
 
 if has('gui_running')
 	set background=dark
