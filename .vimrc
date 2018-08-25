@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'SirVer/ultisnips'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'nrailgun/vim-maps'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -50,7 +51,7 @@ set nowrap
 set number
 set relativenumber
 set smartindent
-set textwidth=90
+set textwidth=120
 set ttyfast
 
 if has('gui_running')
@@ -58,7 +59,7 @@ if has('gui_running')
 	colorscheme solarized
 elseif &term =~ 'xterm'
 	set t_Co=256
-	colorscheme norokai
+	colorscheme molokai
 else
 	colorscheme peachpuff
 endif
