@@ -4,9 +4,9 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
-Plug 'ludovicchabant/vim-gutentags', { 'for': ['c', 'cpp', 'h', 'hpp', 'py']}
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'nrailgun/vim-maps'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
