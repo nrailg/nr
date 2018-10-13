@@ -60,6 +60,7 @@ set backspace=indent,eol,start
 set cinoptions=(1s,g0,:0,N-s,t0
 set colorcolumn=+1,+11
 set completeopt=menu,menuone,longest
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set encoding=utf-8
 set exrc
 set fileformat=unix
