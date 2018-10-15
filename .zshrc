@@ -100,34 +100,21 @@ function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
 }
 
-alias dict='dict -d gcide'
 alias ev='evince'
 alias gdb='gdb -q'
-alias iconv='iconv -f gbk -t utf8'
 alias less='less -r'
 alias logt='tail /var/log/syslog'
 alias pe='ps -e'
+alias tmux='tmux -2'
 alias tree='tree -C'
 alias trp='trash-put'
-alias uname='uname -r'
-alias tmux='tmux -2'
 
 if [ -e ~/.zsh_localrc ]; then
 	. ~/.zsh_localrc
 fi
 
-ECLIPSE_PATH='/opt/eclipse';
-if [ -e "$ECLIPSE_PATH" ]; then
-	alias eclipse="$ECLIPSE_PATH/eclipse >/dev/null 2>/dev/null &";
-fi
-
 if [ -e '/opt/nr-script' ]; then
 	PATH="$PATH:/opt/nr-script/bin";
-	export PATH;
-fi
-
-if [ -e '/opt/global' ]; then
-	PATH="$PATH:/opt/global/bin";
 	export PATH;
 fi
 
@@ -146,7 +133,7 @@ if [ -e "$TEXDIR" ]; then
 	export INFOPATH MANPATH;
 fi
 
-if [ -e "$CUDA_PATH" ]; then
+if [ "$CUDA_PATH" ] && [ -e "$CUDA_PATH" ]; then
 	PATH="$PATH:$CUDA_PATH/bin";
 	export PATH;
 
@@ -180,11 +167,10 @@ if [ -e "$JDK7_PATH" ]; then
 	export CLASSPATHl
 fi
 
-if [ ! "$ANACONDA_PATH" ]; then
-	ANACONDA_PATH='/opt/anaconda';
+if [ ! "$GOPATH" ]; then
+	export GOPATH="$HOME/go";
 fi
 
-if [ -e "$ANACONDA_PATH" ]; then
-	PATH="$ANACONDA_PATH/bin:$PATH";
-	export PATH;
+if [ -e "$GOPATH" ]; then
+	export PATH="$PATH:$GOPATH/bin"
 fi
