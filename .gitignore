@@ -12,8 +12,10 @@ Public
 Storage
 Videos
 VirtualBox-VMs
+db
 go
 repo
+usr
 workspace
 
 .zsh_localrc
