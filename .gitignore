@@ -17,5 +17,6 @@ go
 repo
 usr
 workspace
+github
 
 .zsh_localrc

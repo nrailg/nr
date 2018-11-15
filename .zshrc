@@ -94,7 +94,7 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^p' up-history
 bindkey '^n' down-history
 
-#source "/usr/share/autojump/autojump.zsh"
+source "/usr/share/autojump/autojump.zsh"
 
 function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
