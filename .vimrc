@@ -18,7 +18,7 @@ Plug 'vim-scripts/L9'
 call plug#end()
 
 let g:NERDTreeDirArrows = 0
-let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.d$', '\.pyc$', '\~$', '\.in$', '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$']
+let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$', '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$']
 let g:NERDTreeWinPos    = 'right'
 let g:NERDTreeWinSize   = 60
 
@@ -83,12 +83,13 @@ set backspace=indent,eol,start
 set cinoptions=(1s,g0,:0,N-s,t0
 set colorcolumn=+1,+11
 set completeopt=menu,menuone,longest
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set encoding=utf-8
 set exrc
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set fileformat=unix
 set foldlevelstart=99
 set foldmethod=syntax
+set formatoptions-=t
 set hidden
 set hlsearch
 set incsearch
