@@ -13,10 +13,11 @@ Storage
 Videos
 VirtualBox-VMs
 db
+github
 go
+opt
 repo
 usr
 workspace
-github
 
 .zsh_localrc
