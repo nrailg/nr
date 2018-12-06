@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
+Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'ludovicchabant/vim-gutentags'
