@@ -9,4 +9,4 @@ nnoremap <buffer> <C-G>     :!grep -n <C-R>=expand("<cword>")<CR>
 
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
