@@ -79,6 +79,12 @@ let g:ycm_key_detailed_diagnostics = ''
 let g:ycm_key_list_select_completion = []
 let g:ycm_key_list_previous_completion = []
 
+let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+
 syntax enable
 syntax on
 set backspace=indent,eol,start
