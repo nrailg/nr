@@ -96,7 +96,7 @@ set exrc
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set fileformat=unix
 set foldlevelstart=99
-set foldmethod=syntax
+set foldmethod=indent
 set formatoptions-=t
 set hidden
 set hlsearch
