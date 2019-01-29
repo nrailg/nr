@@ -9,7 +9,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'nrailgun/vim-maps'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -101,10 +101,13 @@ set formatoptions-=t
 set hidden
 set hlsearch
 set incsearch
+set noexpandtab
 set nowrap
 set number
 set relativenumber
+set shiftwidth=8
 set smartindent
+set tabstop=8
 set textwidth=120
 set ttyfast
 

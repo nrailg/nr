@@ -1,8 +1,5 @@
 " Syntax
 
-set shiftwidth=4
-set tabstop=4
-
 syntax match _cFunction display "\w\+\s*("ms=s,me=e-1
 highlight def link _cFunction Function
 
@@ -14,5 +11,3 @@ highlight def link _cMacro Constant
 
 setlocal keywordprg=man\ -s\ 2,3,7
 set path+=include
-
-abbr szo sizeof(
