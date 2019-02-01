@@ -9,7 +9,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
-"Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'nrailgun/vim-maps'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -53,8 +53,6 @@ let g:tagbar_type_go = {
 let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-B>'
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'
-
-let g:gtag_enter_win_cclose = 1
 
 let g:gutentags_project_root = ['.git', '.svn', '.idea', '.project']
 let g:gutentags_ctags_tagfile = '.tags'
@@ -105,9 +103,9 @@ set noexpandtab
 set nowrap
 set number
 set relativenumber
-set shiftwidth=8
+set shiftwidth=4
 set smartindent
-set tabstop=8
+set tabstop=4
 set textwidth=120
 set ttyfast
 
@@ -124,3 +122,8 @@ endif
 autocmd BufNewFile,BufRead *.h   set ft=cpp
 autocmd BufNewFile,BufRead *.cu  set ft=cpp
 autocmd BufNewFile,BufRead *.cuh set ft=cpp
+
+augroup filetype_lua
+	autocmd!
+	autocmd FileType lua setlocal iskeyword+=:
+augroup END
