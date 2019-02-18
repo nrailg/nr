@@ -19,5 +19,6 @@ opt
 repo
 usr
 workspace
+nr-script
 
 .zsh_localrc
