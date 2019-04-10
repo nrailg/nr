@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
@@ -13,7 +14,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 Plug 'nrailgun/vim-maps'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'vim-scripts/FuzzyFinder'
+"Plug 'vim-scripts/FuzzyFinder'
 Plug 'vim-scripts/L9'
 
 " Initialize plugin system
@@ -83,6 +84,13 @@ let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 
+let g:ctrlp_map = ''
+let g:ctrlp_max_files=0
+let g:ctrlp_custom_ignore = {
+			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+			\ 'file': '\v\.(exe|o|so|a|pyc|dll)$',
+			\ }
+
 syntax enable
 syntax on
 set backspace=indent,eol,start
@@ -122,8 +130,3 @@ endif
 autocmd BufNewFile,BufRead *.h   set ft=cpp
 autocmd BufNewFile,BufRead *.cu  set ft=cpp
 autocmd BufNewFile,BufRead *.cuh set ft=cpp
-
-augroup filetype_lua
-	autocmd!
-	autocmd FileType lua setlocal iskeyword+=:
-augroup END

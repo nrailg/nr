@@ -1,6 +1,5 @@
 .*
 
-Books
 Desktop
 Documents
 Downloads
@@ -9,16 +8,20 @@ Music
 Packages
 Pictures
 Public
-Storage
 Videos
+
+Books
+Storage
 VirtualBox-VMs
+
 db
 github
 go
+help
+nr-script
 opt
 repo
 usr
 workspace
-nr-script
 
 .zsh_localrc
