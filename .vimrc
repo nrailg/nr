@@ -85,7 +85,11 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 
 let g:ctrlp_map = ''
-let g:ctrlp_max_files=0
+let g:ctrlp_max_files = 0
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 let g:ctrlp_custom_ignore = {
 			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
 			\ 'file': '\v\.(exe|o|so|a|pyc|dll)$',
