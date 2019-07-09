@@ -53,8 +53,7 @@ plugins=(git)
 
 # User configuration
 
-# export PATH="/opt/anaconda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/nr-script/bin:/opt/global/bin:/opt/Matlab/bin:/opt/texlive/bin/x86_64-linux:/usr/local/cuda/bin:/usr/lib/jvm/java-7-openjdk-amd64/bin:/opt/hadoop/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+#export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
