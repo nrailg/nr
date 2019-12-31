@@ -3,7 +3,7 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -123,8 +123,8 @@ if has('gui_running')
 	set background=dark
 	colorscheme solarized
 elseif &term =~ 'xterm'
-	set t_Co=256
-	colorscheme molokai
+	"set t_Co=256
+	"colorscheme molokai
 else
 	colorscheme peachpuff
 endif

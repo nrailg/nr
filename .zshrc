@@ -169,7 +169,3 @@ fi
 if [ ! "$GOPATH" ]; then
 	export GOPATH="$HOME/go";
 fi
-
-if [ -e "$GOPATH" ]; then
-	export PATH="$PATH:$GOPATH/bin"
-fi
