@@ -76,11 +76,12 @@ let g:ycm_key_detailed_diagnostics = ''
 let g:ycm_key_list_select_completion = []
 let g:ycm_key_list_previous_completion = []
 
+let g:go_def_mode = 'godef'
 let g:go_fmt_command = "goimports"
-let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_types = 1
 
 let g:ctrlp_map = ''
 let g:ctrlp_max_files = 0
@@ -123,8 +124,8 @@ if has('gui_running')
 	set background=dark
 	colorscheme solarized
 elseif &term =~ 'xterm'
-	"set t_Co=256
-	"colorscheme molokai
+	set t_Co=256
+	colorscheme molokai
 else
 	colorscheme peachpuff
 endif
