@@ -93,17 +93,11 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^p' up-history
 bindkey '^n' down-history
 
-source "/usr/share/autojump/autojump.zsh"
-
 function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
 }
 
-alias ev='evince'
-alias gdb='gdb -q'
 alias less='less -r'
-alias logt='tail /var/log/syslog'
-alias pe='ps -e'
 alias tmux='tmux -2'
 alias tree='tree -C'
 alias trp='trash-put'
@@ -112,60 +106,13 @@ if [ -e ~/.zsh_localrc ]; then
 	. ~/.zsh_localrc
 fi
 
-if [ -e '/opt/nr-script' ]; then
-	PATH="$PATH:/opt/nr-script/bin";
-	export PATH;
-fi
-
-if [ "$MATLAB_PATH" ] && [ -e "$MATLAB_PATH" ]; then
-	PATH="$PATH:$MATLAB_PATH";
-	export PATH;
-fi
-
-TEXDIR='/opt/texlive/2014';
-if [ -e "$TEXDIR" ]; then
-	PATH="$PATH:$TEXDIR/bin/x86_64-linux";
-	export PATH;
-
-	INFOPATH="$INFOPATH:$TEXDIR/texmf-dist/doc/info";
-	MANPATH="$MANPATH:$TEXDIR/texmf-dist/doc/man";
-	export INFOPATH MANPATH;
-fi
-
-if [ "$CUDA_PATH" ] && [ -e "$CUDA_PATH" ]; then
-	PATH="$PATH:$CUDA_PATH/bin";
-	export PATH;
-
-	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDA_PATH/lib64";
-	export LD_LIBRARY_PATH;
-fi
-
-if [ "$CUDNN_PATH" ] && [ -e "$CUDNN_PATH" ]; then
-	CPATH="$CPATH:$CUDNN_PATH/include";
-	export CPATH;
-
-	LIBRARY_PATH="$LIBRARY_PATH:$CUDNN_PATH/lib64";
-	export LIBRARY_PATH;
-
-	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDNN_PATH/lib64";
-	export LD_LIBRARY_PATH;
-fi
-
-if [ ! "$JDK7_PATH" ]; then
-	JDK7_PATH='/usr/lib/jvm/java-7-openjdk-amd64';
-fi
-
-if [ -e "$JDK7_PATH" ]; then
-	PATH="$PATH:$JDK7_PATH/bin";
-	export PATH;
-
-	JAVA_HOME="$JDK7_PATH";
-	export JAVA_HOME;
-
-	CLASSPATH=".:${JAVA_HOME}/lib:${JAVA_HOME}/lib/tools.jar";
-	export CLASSPATHl
-fi
-
-if [ ! "$GOPATH" ]; then
-	export GOPATH="$HOME/go";
-fi
+#if [ "$CUDNN_PATH" ] && [ -e "$CUDNN_PATH" ]; then
+#	CPATH="$CPATH:$CUDNN_PATH/include";
+#	export CPATH;
+#
+#	LIBRARY_PATH="$LIBRARY_PATH:$CUDNN_PATH/lib64";
+#	export LIBRARY_PATH;
+#
+#	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDNN_PATH/lib64";
+#	export LD_LIBRARY_PATH;
+#fi

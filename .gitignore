@@ -13,6 +13,7 @@ Videos
 Books
 Storage
 VirtualBox-VMs
+QQMail
 
 db
 github
@@ -22,6 +23,7 @@ nr-script
 opt
 repo
 usr
+bin
 workspace
 
 .zsh_localrc
