@@ -98,6 +98,7 @@ if has('gui_running')
 elseif &term =~ 'xterm'
 	set t_Co=256
 	colorscheme molokai
+	highlight PmenuSel ctermfg=81 ctermbg=244 guibg=#808080
 else
 	colorscheme peachpuff
 endif
