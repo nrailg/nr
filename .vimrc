@@ -5,13 +5,13 @@ call plug#begin('~/.vim/plugged')
 
 "Plug 'Vimjas/vim-python-pep8-indent'
 "Plug 'fatih/vim-go'
+"Plug 'honza/vim-snippets'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
-Plug 'honza/vim-snippets'
-Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 Plug 'nrailgun/vim-maps'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'vim-scripts/L9'
 
 " Initialize plugin system
@@ -82,15 +82,22 @@ set formatoptions-=t
 set hidden
 set hlsearch
 set incsearch
-set noexpandtab
 set nowrap
 set number
 set relativenumber
-set shiftwidth=4
-set smartindent
-set tabstop=4
 set textwidth=120
-set ttyfast
+
+" indent with tab
+"set noexpandtab
+"set shiftwidth=4
+"set smartindent
+"set tabstop=4
+
+" indent with space
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 
 if has('gui_running')
 	set background=dark
@@ -106,3 +113,50 @@ endif
 autocmd BufNewFile,BufRead *.h   set ft=cpp
 autocmd BufNewFile,BufRead *.cu  set ft=cpp
 autocmd BufNewFile,BufRead *.cuh set ft=cpp
+
+" coc {
+"autocmd FileType json syntax match Comment +\/\/.\+$+
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for format selected region
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+nmap <silent>fm <Plug>(coc-format) 
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json,cc,c++ setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+augroup filetype
+    autocmd! BufRead,BufNewFile BUILD set filetype=blade
+augroup end
+" }
