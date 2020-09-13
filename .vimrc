@@ -104,7 +104,7 @@ if has('gui_running')
 	colorscheme solarized
 elseif &term =~ 'xterm'
 	set t_Co=256
-	colorscheme molokai
+	colorscheme norokai
 	highlight PmenuSel ctermfg=81 ctermbg=244 guibg=#808080
 else
 	colorscheme peachpuff
