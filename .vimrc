@@ -69,7 +69,7 @@ let g:ctrlp_custom_ignore = {
 syntax enable
 syntax on
 set backspace=indent,eol,start
-set cinoptions=(1s,g0,:0,N-s,t0
+set cinoptions=(0,l1,g1,t0,N-s
 set colorcolumn=+1,+11
 set completeopt=menu,menuone,longest
 set encoding=utf-8
