@@ -3,10 +3,10 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-"Plug 'Vimjas/vim-python-pep8-indent'
+"Plug 'Yggdroot/indentLine', {'for': 'python'}
 "Plug 'fatih/vim-go'
 "Plug 'honza/vim-snippets'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
@@ -14,11 +14,16 @@ Plug 'nrailgun/vim-maps'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'vim-scripts/L9'
 
+let g:nrwu_use_coc = 0
+if g:nrwu_use_coc == 1
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+endif
+
 " Initialize plugin system
 call plug#end()
 
 let g:NERDTreeDirArrows = 0
-let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$', '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$']
+let g:NERDTreeIgnore    = ['\.o$', '\.out$', '\.pyc$', '\~$', '\.in$', '\.lo$', '\.la$', '\.so$', '\.cache$', '\.class$', '__pycache__']
 let g:NERDTreeWinPos    = 'right'
 let g:NERDTreeWinSize   = 60
 
@@ -69,7 +74,7 @@ let g:ctrlp_custom_ignore = {
 syntax enable
 syntax on
 set backspace=indent,eol,start
-set cinoptions=(0,l1,g1,t0,N-s
+set cinoptions=(0,l1,g-1,t0,N-s
 set colorcolumn=+1,+11
 set completeopt=menu,menuone,longest
 set encoding=utf-8
@@ -104,7 +109,7 @@ if has('gui_running')
 	colorscheme solarized
 elseif &term =~ 'xterm'
 	set t_Co=256
-	colorscheme norokai
+	colorscheme molokai
 	highlight PmenuSel ctermfg=81 ctermbg=244 guibg=#808080
 else
 	colorscheme peachpuff
@@ -115,48 +120,43 @@ autocmd BufNewFile,BufRead *.cu  set ft=cpp
 autocmd BufNewFile,BufRead *.cuh set ft=cpp
 
 " coc {
-"autocmd FileType json syntax match Comment +\/\/.\+$+
-"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+if g:nrwu_use_coc == 1
+  " Remap keys for gotos
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
 
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+  " Remap for rename current word
+  nmap <leader>rn <Plug>(coc-rename)
 
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+  " Remap for format selected region
+  xmap <leader>f  <Plug>(coc-format-selected)
+  nmap <leader>f  <Plug>(coc-format-selected)
+  nmap <silent>fm <Plug>(coc-format) 
 
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-nmap <silent>fm <Plug>(coc-format) 
+  augroup mygroup
+    autocmd!
+    " Setup formatexpr specified filetype(s).
+    autocmd FileType typescript,json,cc,c++ setl formatexpr=CocAction('formatSelected')
+    " Update signature help on jump placeholder
+    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  augroup end
 
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json,cc,c++ setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
+  " Use K to show documentation in preview window
+  nnoremap <silent> K :call <SID>show_documentation()<CR>
+  function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+      execute 'h '.expand('<cword>')
+    else
+      call CocAction('doHover')
+    endif
+  endfunction
 
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-augroup filetype
-    autocmd! BufRead,BufNewFile BUILD set filetype=blade
-augroup end
+  " Highlight symbol under cursor on CursorHold
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+  augroup filetype
+      autocmd! BufRead,BufNewFile BUILD set filetype=blade
+  augroup end
+endif
 " }
