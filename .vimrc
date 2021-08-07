@@ -3,21 +3,14 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-"Plug 'Yggdroot/indentLine', {'for': 'python'}
-"Plug 'fatih/vim-go'
+"Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
-Plug 'Vimjas/vim-python-pep8-indent', {'for': 'python'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
 Plug 'nrailgun/vim-maps'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'vim-scripts/L9'
-
-let g:nrwu_use_coc = 0
-if g:nrwu_use_coc == 1
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-endif
 
 " Initialize plugin system
 call plug#end()
@@ -29,7 +22,7 @@ let g:NERDTreeWinSize   = 60
 
 let g:tagbar_autofocus      = 1
 let g:tagbar_foldlevel      = 1
-let g:tagbar_hide_nonpublic = 1
+let g:tagbar_hide_nonpublic = 0
 let g:tagbar_sort           = 0
 let g:tagbar_width          = 60
 let g:tagbar_type_go = {
@@ -71,10 +64,8 @@ let g:ctrlp_custom_ignore = {
 			\ 'file': '\v\.(exe|o|so|a|pyc|dll)$',
 			\ }
 
-syntax enable
-syntax on
 set backspace=indent,eol,start
-set cinoptions=(0,l1,g-1,t0,N-s
+set cinoptions=(0,:0,g-1,t0,N-s
 set colorcolumn=+1,+11
 set completeopt=menu,menuone,longest
 set encoding=utf-8
@@ -87,16 +78,13 @@ set formatoptions-=t
 set hidden
 set hlsearch
 set incsearch
+set noignorecase
 set nowrap
 set number
 set relativenumber
-set textwidth=120
-
-" indent with tab
-"set noexpandtab
-"set shiftwidth=4
-"set smartindent
-"set tabstop=4
+set textwidth=100
+syntax enable
+syntax on
 
 " indent with space
 set expandtab
@@ -118,45 +106,3 @@ endif
 autocmd BufNewFile,BufRead *.h   set ft=cpp
 autocmd BufNewFile,BufRead *.cu  set ft=cpp
 autocmd BufNewFile,BufRead *.cuh set ft=cpp
-
-" coc {
-if g:nrwu_use_coc == 1
-  " Remap keys for gotos
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references)
-
-  " Remap for rename current word
-  nmap <leader>rn <Plug>(coc-rename)
-
-  " Remap for format selected region
-  xmap <leader>f  <Plug>(coc-format-selected)
-  nmap <leader>f  <Plug>(coc-format-selected)
-  nmap <silent>fm <Plug>(coc-format) 
-
-  augroup mygroup
-    autocmd!
-    " Setup formatexpr specified filetype(s).
-    autocmd FileType typescript,json,cc,c++ setl formatexpr=CocAction('formatSelected')
-    " Update signature help on jump placeholder
-    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-  augroup end
-
-  " Use K to show documentation in preview window
-  nnoremap <silent> K :call <SID>show_documentation()<CR>
-  function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    else
-      call CocAction('doHover')
-    endif
-  endfunction
-
-  " Highlight symbol under cursor on CursorHold
-  autocmd CursorHold * silent call CocActionAsync('highlight')
-  augroup filetype
-      autocmd! BufRead,BufNewFile BUILD set filetype=blade
-  augroup end
-endif
-" }

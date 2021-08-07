@@ -10,4 +10,3 @@ syntax match _cMacro display "\<[A-Z_][A-Z0-9_]\+\>"
 highlight def link _cMacro Constant
 
 setlocal keywordprg=man\ -s\ 2,3,7
-set path+=include
