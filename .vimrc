@@ -3,8 +3,6 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
