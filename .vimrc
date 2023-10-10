@@ -62,6 +62,7 @@ let g:ctrlp_custom_ignore = {
 			\ 'file': '\v\.(exe|o|so|a|pyc|dll)$',
 			\ }
 
+set noswapfile
 set backspace=indent,eol,start
 set cinoptions=(0,:0,g-1,t0,N-s
 set colorcolumn=+1,+11
