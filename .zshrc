@@ -83,15 +83,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Use vim keybindings
-bindkey -v
 bindkey -s '^k' '_'
-bindkey "^w" backward-kill-word    # vi-backward-kill-word
-bindkey "^h" backward-delete-char  # vi-backward-delete-char
-bindkey "^u" kill-line             # vi-kill-line
-bindkey "^?" backward-delete-char  # vi-backward-delete-char
-bindkey '^r' history-incremental-search-backward
-bindkey '^p' up-history
-bindkey '^n' down-history
+# bindkey -v
+# bindkey "^w" backward-kill-word    # vi-backward-kill-word
+# bindkey "^h" backward-delete-char  # vi-backward-delete-char
+# bindkey "^u" kill-line             # vi-kill-line
+# bindkey "^?" backward-delete-char  # vi-backward-delete-char
+# bindkey '^r' history-incremental-search-backward
+# bindkey '^p' up-history
+# bindkey '^n' down-history
 
 function erred {
   "$@" 2> >(while read line; do echo -e "\e[01;31m$line\e[0m"; done)
@@ -116,3 +116,4 @@ fi
 #	LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDNN_PATH/lib64";
 #	export LD_LIBRARY_PATH;
 #fi
+export PATH="$PATH:$HOME/.ft"

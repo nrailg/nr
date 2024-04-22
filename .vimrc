@@ -3,6 +3,7 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+Plug 'tell-k/vim-autopep8'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar', {'on': 'TagbarToggle'}
@@ -65,7 +66,7 @@ let g:ctrlp_custom_ignore = {
 set noswapfile
 set backspace=indent,eol,start
 set cinoptions=(0,:0,g-1,t0,N-s
-set colorcolumn=+1,+11
+set colorcolumn=+21
 set completeopt=menu,menuone,longest
 set encoding=utf-8
 set exrc
